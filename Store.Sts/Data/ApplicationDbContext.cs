@@ -19,6 +19,6 @@ namespace Store.Sts.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseNpgsql("Host=localhost;Port=5432;Database=store.sts;Username=postgres;Password=gangoptimus");
+            => options.UseSqlite("Data Source={DbPath}");
     }
 }

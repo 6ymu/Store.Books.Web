@@ -35,7 +35,7 @@ namespace Store.Sts
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {   
-                options.UseNpgsql();
+                options.UseSqlite();
                 options.UseOpenIddict();
             });
 

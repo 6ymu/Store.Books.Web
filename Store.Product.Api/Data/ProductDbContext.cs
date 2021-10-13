@@ -14,11 +14,14 @@ namespace Store.Product.Data
         public DbSet<Price> Prices { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BookGenre> BookGenres { get; set; }
+
+        //Add-Migration
         public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options) { }
 
-        // Конструктор для разработки, остальные конструкторы отключить
+        //Конструктор для разработки, остальные конструкторы отключить
+        //Update-Database
         //public ProductDbContext() { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-          => optionsBuilder.UseSqlServer(@"Server=DESKTOP-NB24L70;Database=productsApi;Trusted_Connection=True;");
+      => optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=books;Trusted_Connection=True");  
     }
 }

@@ -31,6 +31,7 @@ namespace Store.Product.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme;
@@ -55,6 +56,8 @@ namespace Store.Product.Api
                     // Register the ASP.NET Core host.
                     options.UseAspNetCore();
                 });
+
+
             services.Configure<ServiceConfig>(Configuration.GetSection("ServiceConfig"));
             var connStr = Configuration.GetConnectionString("LocalConnectionString");
             if (string.IsNullOrWhiteSpace(connStr))

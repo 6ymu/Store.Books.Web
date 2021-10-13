@@ -11,6 +11,6 @@ namespace Store.Books.Localization.Services
         //public LocalizationDbContext() { }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
           //=> optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=localizations;Trusted_Connection=True;");
-          => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=localization;Username=postgres;Password=gtxtymrf123");
+          => optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=localization;Trusted_Connection=True");
     }
 }
